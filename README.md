@@ -10,3 +10,8 @@
 
 本次爬蟲的目標是獲取 KKday 平台上東京住宿的前十名推薦，分析其價格、地理位置、評價等資訊，為旅遊者提供決策支持。
 
+## 方法
+
+-[目標網站描述]
+-- [目標網站：KKday 東京住宿推薦頁面。
+https://www.kkday.com/zh-tw/category/jp-tokyo/accommodation]
