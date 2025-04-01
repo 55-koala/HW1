@@ -13,5 +13,11 @@
 ## 方法
 
 - 目標網站描述
-- 目標網站：KKday 東京住宿推薦頁面。
-https://www.kkday.com/zh-tw/category/jp-tokyo/accommodation
+  - 目標網站：KKday 東京住宿推薦頁面。  
+  https://www.kkday.com/zh-tw/category/jp-tokyo/accommodation
+  - 頁面結構：包含住宿名稱、圖片、價格、評價等資訊。
+
+- 工具與技術
+  - 使用 Python 的 `requests` 庫發送 HTTP 請求。
+  - 使用 `BeautifulSoup` 解析 HTML。
+  - 使用 Google Chrome 開發者工具取得 AJAX 資料。
