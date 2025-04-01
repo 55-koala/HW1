@@ -12,6 +12,4 @@
 
 ## 方法
 
--[目標網站描述]
--- [目標網站：KKday 東京住宿推薦頁面。
-https://www.kkday.com/zh-tw/category/jp-tokyo/accommodation]
+- [目標網站描述]
