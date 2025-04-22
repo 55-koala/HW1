@@ -24,6 +24,7 @@
   - 開發輔助工具：無需使用瀏覽器開發者工具，JokeAPI 為公開 API，直接透過 HTTP GET 方法即可取得資料。
 
 ## 程式碼
+
 ```python
 !pip install pandas requests
 
@@ -53,7 +54,9 @@ csv_filename = "jokes_from_api.csv"
 df.to_csv(csv_filename, index=False, encoding="utf-8-sig")
 
 ```
+
 ## 結果
+
 - 數據存儲方式
   - 將數據存儲為 CSV 格式，方便後續分析。
 ```python
@@ -63,12 +66,16 @@ df = pd.read_csv("jokes_from_api.csv")
 
 df.head()
 ```
+
 ## 問題與挑戰
+
 - 資料格式不一致:  
     JokeAPI 的資料有兩種格式：單句型 (single) 和問答型 (twopart)，需要根據 type 欄位判斷資料並分別處理。
 - 資料量與速度限制:  
     請求過多資料（例如一次抓100筆），可能會遇到伺服器拒絕請求。
-- 連線失敗風險:
-    API 可能會因網路不穩或伺服器問題而無法回應，需使用錯誤處理機制來確保程式穩定運行。
 
+## 結論
+
+- 成功獲取並分析了 KKday 推薦的前十名東京住宿資訊，為旅遊提供了有價值的參考。
+- 未來可擴展至其他旅遊平台，進行跨平台比較分析。
 
