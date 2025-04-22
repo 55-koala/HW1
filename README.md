@@ -62,5 +62,4 @@ import pandas as pd
 df = pd.read_csv("jokes_from_api.csv")
 
 df.head()
-
 ```
