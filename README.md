@@ -25,44 +25,37 @@
 
 ## 程式碼
 ```python
-# 安裝必要套件
 !pip install pandas requests
 
-# 匯入模組
 import requests
 import pandas as pd
 
-# 呼叫 JokeAPI，設定參數：只要 programming 類別笑話
 url = "https://v2.jokeapi.dev/joke/Any?amount=10"
 
 response = requests.get(url)
 data = response.json()
 
-# 準備儲存的列表
 jokes = []
 
-# 抓每個笑話
 for joke in data.get("jokes", []):
     if joke["type"] == "single":
-        # 單句笑話
         jokes.append({
             "Title": "One-liner",
             "Content": joke["joke"]
         })
     else:
-        # 問答型笑話
         jokes.append({
             "Title": joke["setup"],
             "Content": joke["delivery"]
         })
 
-# 轉成 DataFrame
 df = pd.DataFrame(jokes)
 
-# 存成 CSV
 csv_filename = "jokes_from_api.csv"
 df.to_csv(csv_filename, index=False, encoding="utf-8-sig")
 
-# 顯示前5筆
 df.head()
 ```
+## 結果
+- 數據存儲方式
+  - 將數據存儲為 CSV 格式，方便後續分析。
