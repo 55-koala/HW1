@@ -56,7 +56,7 @@ df.to_csv(csv_filename, index=False, encoding="utf-8-sig")
 ## 結果
 - 數據存儲方式
   - 將數據存儲為 CSV 格式，方便後續分析。
-```
+```python
 import pandas as pd
 
 df = pd.read_csv("jokes_from_api.csv")
