@@ -67,7 +67,7 @@ df = pd.read_csv("jokes_from_api.csv")
 df.head()
 ```
 
-## 問題與挑戰
+## 問題與挑挑戰
 
 - 資料格式不一致:  
     JokeAPI 的資料有兩種格式：單句型 (single) 和問答型 (twopart)，需要根據 type 欄位判斷資料並分別處理。
