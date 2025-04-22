@@ -31,12 +31,10 @@ import requests
 import pandas as pd
 
 url = "https://v2.jokeapi.dev/joke/Any?amount=10"
-
 response = requests.get(url)
 data = response.json()
 
 jokes = []
-
 for joke in data.get("jokes", []):
     if joke["type"] == "single":
         jokes.append({
@@ -54,8 +52,15 @@ df = pd.DataFrame(jokes)
 csv_filename = "jokes_from_api.csv"
 df.to_csv(csv_filename, index=False, encoding="utf-8-sig")
 
-df.head()
 ```
 ## 結果
 - 數據存儲方式
   - 將數據存儲為 CSV 格式，方便後續分析。
+```
+import pandas as pd
+
+df = pd.read_csv("jokes_from_api.csv")
+
+df.head()
+
+```
